@@ -27,13 +27,13 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
-  min-height: 100svh;
-  padding: 2.3em;
 }
 
 main {
-  max-width: 600px;
-  margin: auto;
+  min-height: 100vh;
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -63,7 +63,7 @@ header img {
 /* hero section styles */
 
 .hero__heading {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.3rem);
   font-weight: 600;
   margin-top: 2.5em;
 }
@@ -90,15 +90,12 @@ header img {
 
 /* footer styles */
 footer {
-  position: fixed;
-  bottom: 2.3em;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-content: center;
+  margin-top: auto;
   display: flex;
   gap: 0.7em;
 }
 footer a {
-  display: inline-block;
   width: 1.7em;
   height: 1.7em;
   display: grid;
@@ -120,26 +117,22 @@ footer a:hover svg {
 /* responsive styles */
 
 @media only screen and (min-width: 600px) {
-  body {
-    padding: 3em;
+  main {
+    margin: 3em 6em;
   }
   .hero__heading {
     margin-top: 1.5em;
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   body {
     background-image: url("./images/bg-desktop.svg");
-    background-size: cover;
+    background-size: 90% 100%;
     text-align: left;
-    padding-inline: 6em;
-  }
-  main {
-    max-width: none;
   }
   header {
-    margin-bottom: 2em;
+    margin-bottom: 6em;
   }
   .container {
     display: flex;
@@ -160,7 +153,7 @@ footer a:hover svg {
   }
   .hero__button {
     display: inline-block;
-    width: 16em;
+    width: 11em;
   }
   footer {
     width: 100%;
@@ -177,16 +170,11 @@ footer a:hover svg {
   }
 }
 
-@media only screen and (min-width: 1100px) {
+/* @media only screen and (min-width: 1100px) {
   body {
-    padding-inline: 5.5em;
-    padding-block: 2em;
-    background-size: 93% 100%;
+    padding-inline: 5em;
   }
   header {
-    margin-bottom: 1em;
+    margin-bottom: 4em;
   }
-  .container {
-    align-items: stretch;
-  }
-}
+} */
